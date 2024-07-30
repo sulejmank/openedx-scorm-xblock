@@ -42,7 +42,7 @@ with io.open(os.path.join(here, "README.rst"), "rt", encoding="utf8") as f:
     readme = f.read()
 
 setup(
-    name="openedx-scorm-xblock",
+    name="scorm-lnds",
     version=VERSION,
     description="Scorm XBlock for Open edX",
     long_description=readme,
@@ -60,7 +60,7 @@ setup(
     packages=["openedxscorm"],
     python_requires=">=3.8",
     install_requires=["xblock", "web-fragments"],
-    entry_points={"xblock.v1": ["scorm2 = openedxscorm:ScormXBlock"]},
+    entry_points={"xblock.v1": ["scorm = openedxscorm:ScormXBlock"]},
     package_data=package_data("openedxscorm", ["static", "public", "locale"]),
     license="AGPLv3",
     classifiers=["License :: OSI Approved :: GNU Affero General Public License v3"],
